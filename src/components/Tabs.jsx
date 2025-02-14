@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 export function Tabs(props) {
-         const { todos } = props;
-  const tabs = ["All", "Open", "Completed"];
+  const { todos, tabs, setTabs } = props;
+  const tabOptions = ["All", "Open", "Completed"];
   return (
     <nav className="tab-container">
-      {tabs.map((tab, tabIndex) => {
+      { tabOptions.map((tab, tabIndex) => {
         const numberOfTodos = () => {
           if(tab === "All"){
             return ( todos.length)
